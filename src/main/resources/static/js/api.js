@@ -1,5 +1,5 @@
 // ===== API BASE URL =====
-//const API = 'http://localhost:8083/api'; replace to
+
 const API = '/api';
 
 // ===== GENERIC FETCH HELPERS =====
