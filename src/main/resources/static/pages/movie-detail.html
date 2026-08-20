@@ -67,8 +67,10 @@
                 const movie = await MovieAPI.getById(movieId);
                 document.title = `${movie.title} - BookMyShow`;
                 document.getElementById('movie-detail').innerHTML = `
-                    <div style="width:220px; height:320px; border-radius:var(--radius); overflow:hidden; flex-shrink:0; display:flex; align-items:center; justify-content:center; font-size:6rem; background:linear-gradient(135deg, #1a1a2e, #16213e);">
-                        🎬
+                    <div style="width:220px; height:320px; border-radius:var(--radius); overflow:hidden; flex-shrink:0; background:linear-gradient(135deg, #1a1a2e, #16213e);">
+                      <img src="${movie.posterUrl || '../assets/default-movie.png'}"
+                       alt="${movie.title}"
+                      style="width:100%; height:100%; object-fit:cover;">
                     </div>
                     <div style="flex:1; min-width:250px;">
                         <h1 style="font-size:2rem; margin-bottom:0.5rem;">${movie.title}</h1>
